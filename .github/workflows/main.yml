@@ -16,14 +16,14 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: set up JDK 11
-    - run : git update-index --chmod=+x gradlew
+    
       uses: actions/setup-java@v3
       with:
         java-version: '11'
         distribution: 'temurin'
         cache: gradle
         
-    - run : chmod -x gradlew
+    - run : git update-index --chmod=+x gradlew
 
     - name: Build with Gradle
       env:
